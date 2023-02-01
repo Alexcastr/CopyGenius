@@ -22,10 +22,11 @@ export const Sidebar: FC<Props> = ({ children }) => {
   function handleNavbar(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     setOpenNavbar(!openNavbar);
+    console.log(openNavbar)
   }
 
   return (
-    <div className="relative h-screen md:flex">
+    <div className="relative h-full md:flex">
       <ToggleMenu handleNavbar={handleNavbar} openNavbar={openNavbar} />
 
       {/* sidebar */}
@@ -60,7 +61,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
         </div>
       </section>
 
-      <main className=" bg-gray-800 flex-1 text-2xl font-bold text-gray-700 pt-16 h-screen">
+      <main className=" bg-gray-800 flex-1 text-2xl font-bold text-gray-700 pt-16 h-screen sm:max-h-full">
         {children}
       <Footer/>
       </main>

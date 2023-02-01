@@ -3,7 +3,7 @@
 export const Footer = () => {
   return (
     
-<footer className=" bg-white dark:bg-gray-800 w-full hidden sm:contents">
+<footer className=" bg-white dark:bg-gray-800 w-full hidden lg:contents ">
     <div className="flex flex-col gap-5 px-4 mx-auto">
         
         <div className="pt-8 flex max-w-xs mx-auto items-center justify-between gap-4">
@@ -38,7 +38,7 @@ export const Footer = () => {
                 </svg>
             </a>
         </div>
-        <div className="text-center text-gray-500 dark:text-gray-200 font-light flex items-center justify-center pb-20">
+        <div className="text-center text-gray-500 dark:text-gray-200 font-light flex items-center justify-center pb-4">
             Created by Alex Castro
         </div>
     </div>

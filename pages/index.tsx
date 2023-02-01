@@ -4,7 +4,7 @@ import { Sidebar } from "../components/Sidebar";
 export default function Home() {
   return (
     <Sidebar>
-      <section className="grid justify-center mx-4 h-[75%]">
+      <section className="grid justify-center mx-4 h-[80%]">
         <div>
           <h1 className="text-5xl font-extrabold text-gray-100 text-center ">
             Te generamos{" "}
@@ -13,7 +13,7 @@ export default function Home() {
             </span>
             eficaces con inteligencia artificial
           </h1>
-          <p className="py-14 text-3xl text-center text-neutral-400">
+          <p className="py-10 md:py-14 text-xl md:text-3xl text-center text-neutral-400">
             Copys personalizados que se ajusten a tu audiencia y objetivos.
             "Ahorra tiempo y esfuerzo al dejar que CopyGenius AI se encargue de
             la escritura de tus copys de marketing."
