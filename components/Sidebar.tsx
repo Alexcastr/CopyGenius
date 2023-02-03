@@ -35,7 +35,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
         <div className="sticky left-0 top-7 ">
           <nav className="pl-4 pt-4">
             <Link href="/" legacyBehavior>
-              <a className="block py-2.5 px-4 hover:bg-cyan-900 hover:text-white rounded transition duration-200">
+              <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
                 <div className="flex gap-4 items-center">
                   <span>
                     <AiOutlineHome />
@@ -45,7 +45,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
               </a>
             </Link>
             <Link href="/dashboard" legacyBehavior>
-              <a className="block py-2.5 px-4 hover:bg-cyan-900 hover:text-white rounded transition duration-200">
+              <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
                 <div className="flex gap-4 items-center">
                   <span>
                     <AiFillContainer />
@@ -58,7 +58,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
         </div>
       </section>
 
-      <main className=" bg-gray-800 flex-1 text-2xl font-bold text-gray-700 pt-16 h-screen sm:max-h-full">
+      <main className=" bg-[#03001C] flex-1 text-2xl font-bold text-gray-700 pt-16 h-screen sm:max-h-full">
         {children}
       <Footer/>
       </main>

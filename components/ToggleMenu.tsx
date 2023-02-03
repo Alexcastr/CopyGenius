@@ -11,7 +11,7 @@ export const ToggleMenu: FC = () => {
 
 
   return (
-    <div className="fixed bottom-0 border-t border-gray-200 left-0 w-screen bg-white shadow z-40 md:hidden">
+    <div className="fixed bottom-0 border-t border-gray-200 left-0 w-screen bg-[#B6EADA] shadow z-40 md:hidden ">
       <div className="flex text-gray-800 h-16">
         {sideMenuOpen ? (
           <button
