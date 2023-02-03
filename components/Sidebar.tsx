@@ -1,45 +1,42 @@
-import { FC, useState } from "react";
+import { FC, useState, useContext } from "react";
 import Link from "next/link";
-import { StaticImageData } from "next/image";
+// import { StaticImageData } from "next/image";
 // import Image from "next/image";
 // import copygenius from "../public/copygenius.png";
 import { Footer } from "./Footer";
 import { ToggleMenu } from "./ToggleMenu";
 
 import { AiFillContainer, AiOutlineHome } from "react-icons/ai";
+import { UIContext } from '../context/UIcontext';
 
-interface ImageProps {
-  copygenius: StaticImageData;
-}
+// interface ImageProps {
+//   copygenius: StaticImageData;
+// }
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const Sidebar: FC<Props> = ({ children }) => {
-  const [openNavbar, setOpenNavbar] = useState(false);
+  const {sideMenuOpen} = useContext(UIContext)
+  
 
-  function handleNavbar(e: React.MouseEvent<HTMLButtonElement>) {
-    e.preventDefault();
-    setOpenNavbar(!openNavbar);
-    console.log(openNavbar)
-  }
 
   return (
     <div className="relative h-full md:flex">
-      <ToggleMenu handleNavbar={handleNavbar} openNavbar={openNavbar} />
+      <ToggleMenu />
 
       {/* sidebar */}
       <section
         className={`${
-          openNavbar ? "-translate-x-full " : ""
+          sideMenuOpen ? "-translate-x-full " : ""
         }  bg-slate-900 text-blue-100 w-64 h-screen space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
       >
         <div className="sticky left-0 top-7 ">
           <nav className="pl-4 pt-4">
             <Link href="/" legacyBehavior>
               <a className="block py-2.5 px-4 hover:bg-cyan-900 hover:text-white rounded transition duration-200">
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
                   <span>
                     <AiOutlineHome />
                   </span>{" "}
@@ -49,7 +46,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
             </Link>
             <Link href="/dashboard" legacyBehavior>
               <a className="block py-2.5 px-4 hover:bg-cyan-900 hover:text-white rounded transition duration-200">
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
                   <span>
                     <AiFillContainer />
                   </span>{" "}
