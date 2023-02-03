@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
-import { Sidebar } from '@/components/Sidebar';
-import { CardMessage } from '@/components';
+import { CardMessage, Loader, Sidebar } from '@/components';
 
 const API_KEY = process.env.NEXT_PUBLIC_COHERE_API_KEY || ''
 
@@ -70,7 +69,14 @@ const DashboardPage = () => {
   return (
     <Sidebar>
       <section className="mx-4">
-        <h2 className="text-gray-100 text-center sm:text-left">Dashboard</h2>
+        <h2 className="text-gray-100 text-center sm:text-left">
+          Copywritting for Ads
+        </h2>
+        <p className='text-sm pt-4'>
+          Copy ads are short advertisements that use persuasive language and
+          visuals to encourage consumers to take a specific action, such as
+          making a purchase or signing up for a service.
+        </p>
         <div className="flex flex-col gap-4 sm:justify-evenly sm:flex-row pb-20">
           <form className="mt-10" onSubmit={handleMessage}>
             <div className="mb-6">
@@ -78,7 +84,7 @@ const DashboardPage = () => {
                 htmlFor="large-input"
                 className="block mb-2 text-sm font-medium text-white"
               >
-               Company name
+                Company name
               </label>
               <input
                 required
@@ -103,20 +109,22 @@ const DashboardPage = () => {
               id="message"
               rows={4}
               className="block p-2.5 w-full text-sm  rounded-lg border  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Write the sector you focus on or give it a short description about the goal you want to achieve, Example 01: Digital Marketing and SEO   ||  Example 02: Selling clothes for a summer season" 
+              placeholder="Write the sector you focus on or give it a short description about the goal you want to achieve, Example 01: Digital Marketing and SEO   ||  Example 02: Selling clothes for a summer season"
             />
-            <button
-              disabled={isLoading}
-              type="submit"
-              className="mt-4 text-white w-full sm:max-w-min bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              { isLoading ? 'Loading...' : 'Generate'}
-            </button>
+            {isLoading ? (
+              <Loader />
+            ) : (
+              <button
+                disabled={isLoading}
+                type="submit"
+                className="mt-4 text-white w-full sm:max-w-min bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              >
+                Generate
+              </button>
+            )}
           </form>
 
-          {
-            predictionOutput && (<CardMessage prediction={predictionOutput}/>)
-          }
+          {predictionOutput && <CardMessage prediction={predictionOutput} />}
         </div>
       </section>
     </Sidebar>

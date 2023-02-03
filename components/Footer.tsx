@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className=" bg-gray-800 w-full hidden lg:contents ">
+    <footer className=" bg-slate-900 w-full">
       <div className="flex flex-col gap-5 px-4 mx-auto">
         <div className="pt-8 flex max-w-xs mx-auto items-center justify-between gap-4">
           <Link href="https://www.facebook.com/alex.kstro.1/" legacyBehavior>

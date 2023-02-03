@@ -1,22 +1,22 @@
 import Link from "next/link";
-import { Sidebar } from "../components/Sidebar";
+import { Sidebar } from "@/components/Sidebar";
 
 export default function Home() {
   return (
     <Sidebar>
-      <section className="grid justify-center mx-4 h-[80%]">
-        <div>
+      <section className="mx-4 h-full">
+        <div className="flex flex-col gap-4 lg:gap-10">
           <h1 className="text-5xl font-extrabold text-gray-100 text-center ">
-            Te generamos{" "}
+            CopyGenius generate{" "}
             <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-cyan-400">
-              copys de marketing{" "}
+              effective marketing copys{" "}
             </span>
-            eficaces con inteligencia artificial
+            with artificial intelligence
           </h1>
           <p className="py-10 md:py-14 text-xl md:text-3xl text-center text-neutral-400">
-            Copys personalizados que se ajusten a tu audiencia y objetivos.
-            "Ahorra tiempo y esfuerzo al dejar que CopyGenius AI se encargue de
-            la escritura de tus copys de marketing."
+            Personalized copies that fit your audience and objectives. "Save
+            time and effort by letting CopyGenius AI take over the writing of
+            your marketing copy."
           </p>
           <div className="flex justify-center">
             <Link href="/dashboard" legacyBehavior>

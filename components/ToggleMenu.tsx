@@ -1,6 +1,6 @@
 import { FC, useContext } from "react";
 import Link from "next/link";
-import { AiFillContainer, AiOutlineHome } from "react-icons/ai";
+import { AiFillContainer, AiFillHome, AiFillEdit } from "react-icons/ai";
 import { UIContext } from '../context/UIcontext';
 
 
@@ -38,9 +38,14 @@ export const ToggleMenu: FC = () => {
             <AiFillContainer className="text-4xl hover:opacity-80 text-center" />
           </a>
         </Link>
+        <Link href="/product" legacyBehavior>
+          <a className="grow h-full flex items-center justify-center">
+            <AiFillEdit className="text-4xl hover:opacity-80 text-center" />
+          </a>
+        </Link>
         <Link href="/" legacyBehavior>
           <a className="grow h-full flex items-center justify-center">
-            <AiOutlineHome className="text-4xl hover:opacity-80 text-center" />
+            <AiFillHome className="text-4xl hover:opacity-80 text-center" />
           </a>
         </Link>
       </div>
