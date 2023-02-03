@@ -12,10 +12,10 @@ const DashboardPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [predictionOutput, setPredictionOutput] = useState<string>('')
 
-  async function handleMessage(e: React.FormEvent<HTMLFormElement>) {
+  function handleMessage(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsLoading(true)
-    await fetch("https://api.cohere.ai/generate", {
+    fetch("https://api.cohere.ai/generate", {
       method: "POST",
       headers: {
         Authorization: `BEARER ${API_KEY}`,
@@ -70,7 +70,7 @@ const DashboardPage = () => {
   return (
     <Sidebar>
       <section className="mx-4">
-        <h2 className="text-gray-100 text-center">Dashboard</h2>
+        <h2 className="text-gray-100 text-center sm:text-left">Dashboard</h2>
         <div className="flex flex-col gap-4 sm:justify-evenly sm:flex-row pb-20">
           <form className="mt-10" onSubmit={handleMessage}>
             <div className="mb-6">
