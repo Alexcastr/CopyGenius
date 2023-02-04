@@ -1,17 +1,13 @@
 import { FC, useContext } from "react";
 import Link from "next/link";
-// import { StaticImageData } from "next/image";
-// import Image from "next/image";
-// import copygenius from "../public/copygenius.png";
+import Image from "next/image";
+import copygenius from "../public/copygenius.png";
 import { Footer } from "./Footer";
 import { ToggleMenu } from "./ToggleMenu";
 
-import { AiFillContainer, AiFillHome, AiFillEdit } from "react-icons/ai";
+import {  AiFillHome, AiTwotoneShopping, AiTwotoneCopy } from "react-icons/ai";
 import { UIContext } from '../context/UIcontext';
 
-// interface ImageProps {
-//   copygenius: StaticImageData;
-// }
 
 interface Props {
   children: React.ReactNode;
@@ -30,7 +26,8 @@ export const Sidebar: FC<Props> = ({ children }) => {
           sideMenuOpen ? "-translate-x-full " : ""
         }  bg-slate-900 text-blue-100 w-64 h-screen  space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
       >
-        <div className="sticky left-0 top-7 flex flex-col gap-80">
+        <div className="sticky left-0 top-7 flex flex-col gap-28">
+          <Image className="mx-auto" src={copygenius} alt="copygenius logo" width={80} height={80} />
           <nav className="pl-4 pt-4">
             <Link href="/" legacyBehavior>
               <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
@@ -46,7 +43,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
               <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
                 <div className="flex gap-4 items-center">
                   <span>
-                    <AiFillContainer />
+                    <AiTwotoneCopy />
                   </span>{" "}
                   Copy ads
                 </div>
@@ -56,7 +53,7 @@ export const Sidebar: FC<Props> = ({ children }) => {
               <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
                 <div className="flex gap-4 items-center">
                   <span>
-                    <AiFillEdit />
+                    <AiTwotoneShopping />
                   </span>{" "}
                   Product Description
                 </div>

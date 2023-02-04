@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { CardMessage, Loader, Sidebar } from "@/components";
 
-
 const API_KEY = process.env.NEXT_PUBLIC_COHERE_API_KEY || "";
 
 const ProductPage = () => {
@@ -20,24 +19,24 @@ const ProductPage = () => {
         "Cohere-Version": "2022-12-06",
       },
       body: JSON.stringify({
-        model: 'command-xlarge-nightly',
+        model: "command-xlarge-nightly",
         prompt: `This is a product description; The descriptions should highlight key features and benefits to engage potential customers.. 
         --
-        input: Portable Charger
-        Correct output: Portable Charger: "Stay powered on-the-go with our compact and lightweight portable charger. With 10000mAh capacity and dual USB ports, never run out of juice again."
+        input: Smart Speaker
+        Correct output: "This smart speaker offers an intuitive way to control your home, access music and information, and enjoy hands-free calling and messaging. With voice control, you can easily play music, control your smart home devices, and access information without ever having to pick up your phone. Key features include high-quality audio, integration with other smart home products, and a compact design that can fit seamlessly into any room of your home."
         --
-        input: Wireless Earbuds
-        Correct ouput: Wireless Earbuds: "Experience superior sound quality with our wireless earbuds. With comfortable fit, touch controls, and long battery life, they're perfect for all day listening."
+        input: Robot Vacuum
+        Correct ouput: "This robot vacuum is the ideal cleaning solution for busy individuals who want a spotless home without having to lift a finger. With advanced navigation technology and powerful suction, it can easily clean every nook and cranny of your home, leaving your floors spotless. Key features include voice control, scheduling, and compatibility with smart home systems, making it the perfect addition to your smart home setup."
         --
-        input: Smart Watch
-        Correct output: Smart Watch: "Stay connected and on top of your fitness goals with our sleek smartwatch. With customizable watch faces, fitness tracking, and smartphone notifications, it's the ultimate wearable."
+        input: Electric Scooter:
+        Correct output: : "This electric scooter is the perfect mode of transportation for anyone who wants to get around quickly and efficiently. With a powerful motor, long-range battery, and lightweight design, you can easily navigate through city streets and arrive at your destination with ease. Key features include an easy-to-read display, automatic lights, and a folding design for convenient storage and transport."
         --
-        input:Kitchen Scale
-        Correct output: Kitchen Scale: "Transform your cooking and baking with our digital kitchen scale. Precise measurements and easy-to-use design make it a must-have for every kitchen."
+        input: Smart Watch:
+        Correct output: "This watch is the ultimate accessory for the tech-savvy individual, offering a wealth of features designed to make your life easier and more convenient. With a high-resolution touch screen display, heart rate monitoring, and GPS capabilities, you can stay connected and on top of your health goals wherever you go. Key features include customizable watch faces, voice control, and mobile payments, making it the perfect companion for anyone who wants to simplify their life."
         --
         --
-        input: Smart Home Camera 
-        Correct output: Smart Home Camera: "Keep an eye on your home from anywhere with our smart home camera. With HD video, two-way audio, and night vision, you can stay connected to your home 24/7."
+        input: Wireless Earbuds:
+        Correct output: "These earbuds offer a truly wireless listening experience with no cords or wires to get in the way. They come equipped with Bluetooth connectivity, making it easy to pair with any device, and long battery life, giving you hours of uninterrupted music and hands-free calls. Key features include touch controls, noise cancellation technology, and a compact and lightweight design for comfortable all-day wear."
         --
         input: ${productName} 
         Correct output:`,
@@ -68,20 +67,29 @@ const ProductPage = () => {
         <h2 className="text-gray-100 text-center sm:text-left">
           Product Description
         </h2>
-        <p className="text-sm pt-4 text-left">
-          AI can be useful in product descriptions by
-          automating the process of generating product descriptions. This can
-          lead to several benefits such as:
-        </p>
-        <ul className="text-sm py-4">
-          <li>
-            1- Time-saving:quickly and efficiently, saving time for businesses.
-          </li>
-          <li>2- Consistency: professional and cohesive product catalog.</li>
-          <li>
-            3- Personalization: more relevant and appealing to individual users.
-          </li>
-        </ul>
+        {!predictionOutput && (
+          <div>
+            <p className="text-sm pt-4 text-left">
+              AI can be useful in product descriptions by automating the process
+              of generating product descriptions. This can lead to several
+              benefits such as:
+            </p>
+            <ul className="text-sm py-4">
+              <li>
+                1- Time-saving:quickly and efficiently, saving time for
+                businesses.
+              </li>
+              <li>
+                2- Consistency: professional and cohesive product catalog.
+              </li>
+              <li>
+                3- Personalization: more relevant and appealing to individual
+                users.
+              </li>
+            </ul>
+          </div>
+        )}
+
         <div className="flex flex-col gap-4 sm:justify-evenly sm:flex-row pb-20">
           <form className="mt-7" onSubmit={handleMessage}>
             <label
