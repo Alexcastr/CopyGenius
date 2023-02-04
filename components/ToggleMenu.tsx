@@ -33,7 +33,7 @@ export const ToggleMenu: FC = () => {
           </button>
         )}
 
-        <Link href="/dashboard" legacyBehavior>
+        <Link href="/copyads" legacyBehavior>
           <a className="grow h-full flex items-center justify-center">
             <AiTwotoneCopy className="text-4xl hover:opacity-80 text-center" />
           </a>

@@ -4,7 +4,7 @@ import { CardMessage, Loader, Sidebar } from '@/components';
 
 const API_KEY = process.env.NEXT_PUBLIC_COHERE_API_KEY || ''
 
-const DashboardPage = () => {
+const CopyAdsPage = () => {
 
   const [message, setMessage] = useState<string>('')
   const [name, setName] = useState<string>('')
@@ -67,7 +67,7 @@ const DashboardPage = () => {
   }
 
   return (
-    <Sidebar>
+    <Sidebar title='Copy Ads'>
       <section className="mx-4">
         <h2 className="text-gray-100 text-center sm:text-left">
           Copywritting for Ads
@@ -131,4 +131,4 @@ const DashboardPage = () => {
   );
 }
 
-export default DashboardPage
+export default CopyAdsPage

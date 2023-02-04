@@ -19,7 +19,7 @@ export default function Home() {
             your marketing copy."
           </p>
           <div className="flex justify-center">
-            <Link href="/dashboard" legacyBehavior>
+            <Link href="/copyads" legacyBehavior>
               <a className=" py-2 px-4  bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full w-full sm:w-auto transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                 Try for free
               </a>

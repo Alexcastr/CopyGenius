@@ -62,7 +62,7 @@ const ProductPage = () => {
   }
 
   return (
-    <Sidebar>
+    <Sidebar title="Product Description">
       <section className="mx-4">
         <h2 className="text-gray-100 text-center sm:text-left">
           Product Description
