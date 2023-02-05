@@ -25,11 +25,12 @@ export const ToggleMenu: FC = () => {
         ) : (
           <button
             onClick={openSideMenu}
-            className={`grow flex items-center pt-4 btn btn2`}
+            className={`animate-pulse grow flex items-center pt-4 btn btn2`}
           >
-            <div></div>
-            <div></div>
-            <div></div>
+            
+            <div ></div>
+            <div ></div>
+            <div ></div>
           </button>
         )}
 

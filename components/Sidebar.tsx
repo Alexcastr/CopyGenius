@@ -2,9 +2,9 @@ import { FC, useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { Footer, ToggleMenu } from "./";
 import copygenius from "../public/copygenius.png";
-import { Footer } from "./Footer";
-import { ToggleMenu } from "./ToggleMenu";
+
 
 import {  AiFillHome, AiTwotoneShopping, AiTwotoneCopy } from "react-icons/ai";
 import { UIContext } from '../context/UIcontext';
@@ -25,17 +25,18 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
         <meta name="author" content="Alex Castro" />
         <meta name="description" content="Generate copy for advertisement" />
         <meta name="keywords" content="Ads, Copywriting, Products, AI, artificial intelligence" />
+        <link rel="icon" href="/copygenius.png" /> 
       </Head>
       <div className="relative h-full md:flex">
         <ToggleMenu />
 
         {/* sidebar */}
-        <section
+        <aside
           className={`${
             sideMenuOpen ? "-translate-x-full " : ""
-          }  bg-slate-900 text-blue-100 w-64 h-screen  space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+          }  bg-slate-900 text-blue-100 w-64 h-[102vh]  space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
         >
-          <div className="sticky left-0 top-7 flex flex-col gap-28">
+          <div className="sticky left-0 top-7 flex flex-col gap-24">
             <Image
               className="mx-auto"
               src={copygenius}
@@ -77,9 +78,9 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
             </nav>
             <Footer />
           </div>
-        </section>
+        </aside>
 
-        <main className=" bg-[#03001C] flex-1 text-2xl font-bold text-gray-700 pt-5 md:pt-16 h-screen ">
+        <main className=" bg-[#03001C] flex-1 text-2xl font-bold text-gray-700 pt-5 md:pt-16 h-[102vh] ">
           {children}
         </main>
       </div>

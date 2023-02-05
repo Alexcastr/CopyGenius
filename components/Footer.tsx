@@ -57,8 +57,8 @@ export const Footer = () => {
             </a>
           </Link>
         </div>
-        <div className="text-center text-gray-200 font-light flex items-center justify-center pb-4">
-          Created by Alex Castro
+        <div className="text-center text-lg text-gray-200 font-light flex items-center justify-center">
+          Created by Alex Castro <br/> Using Co:here AI
         </div>
       </div>
     </footer>
