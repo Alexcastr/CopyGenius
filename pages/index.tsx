@@ -15,9 +15,9 @@ export default function Home() {
             with artificial intelligence
           </h1>
           <p className="py-10 sm:py-14 text-sm sm:text-3xl text-center text-neutral-400">
-            Personalized copies that fit your audience and objectives. "Save
+            Personalized copies that fit your audience and objectives. &apos;Save
             time and effort by letting CopyGenius AI take over the writing of
-            your marketing copy."
+            your marketing copy.&apos; 
           </p>
           <div className="flex justify-center">
            <Link href="/copyads" legacyBehavior>
