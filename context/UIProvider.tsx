@@ -10,7 +10,7 @@ interface Props {
 }
 
 const UI_INITIAL_STATE: UIState = {
- sideMenuOpen: false,
+ sideMenuOpen: true,
 }
 
 export const UIProvider:FC<Props> = ({children}) => {

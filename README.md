@@ -4,6 +4,6 @@
 <image src="/public/copygenius_portada.png" alt="Trello ui image">
 
 
-CopyGenius, app web creada usando next js, para participar en la co:here hackaton de midudev; CopyGenius es una herramienta de inteligencia artificial diseñada para generar copias efectivas de marketing, tambien integra otra funcionalidad para crear descripciones a productos.
+CopeGinius web app created using next js, in order to participate in the co:here hackaton of midudev; CopyGenius is an artificial intelligence tool designed to generate effective marketing copy, it also integrates other functionality to create product descriptions.
 
-<a href="https://copy-genius.vercel.app/" rel="nofollow">Sitio WEB</a>
+<a href="https://copy-genius.vercel.app/" rel="nofollow">Web site</a>

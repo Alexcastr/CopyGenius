@@ -3,11 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { Footer, ToggleMenu } from "./";
+import { UIContext } from '../context';
 import copygenius from "../public/copygenius.png";
 
 
 import {  AiFillHome, AiTwotoneShopping, AiTwotoneCopy } from "react-icons/ai";
-import { UIContext } from '../context/UIcontext';
 
 
 interface Props {
@@ -34,7 +34,7 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
         <aside
           className={`${
             sideMenuOpen ? "-translate-x-full " : ""
-          }  bg-slate-900 text-blue-100 w-64 h-[102vh]  space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+          }  bg-slate-900 text-blue-100 w-64 h-[102vh] space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
         >
           <div className="sticky left-0 top-7 flex flex-col gap-24">
             <Image
