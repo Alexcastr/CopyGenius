@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Sidebar>
       <section className="mx-4 h-full">
-        <div className="flex flex-col gap-4 lg:gap-10">
+        <div className="flex flex-col gap-4 lg:gap-14">
           <h1 className="pt-28 sm:pt-4 text-lg sm:text-5xl font-extrabold text-gray-100 text-center ">
             CopyGenius generate{" "}
             <span className="text-lg sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-cyan-400">
@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
            <Link href="/copyads" legacyBehavior>
-              <a className=" py-2 px-4 animate-bounce bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-full w-full sm:w-auto transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+              <a className="mt-20 sm:mt-10 p-6 animate-bounce border border-gray-500 hover:bg-gradient-to-r hover:from-green-400 hover:to-blue-500 hover:border-none text-white rounded-full w-full sm:w-auto transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                 Try for free
               </a>
             </Link>

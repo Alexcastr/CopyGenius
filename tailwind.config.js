@@ -9,7 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        bounce: "bounce 3s infinite",
+      },
+      keyframes: {
+        bounce: {
+          "0%, 100%": { transform: "translateY(-100%)" },
+          "50%": { transform: "none" },
+        },
+      },
+    },
   },
   plugins: [],
 };
