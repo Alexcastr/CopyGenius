@@ -33,7 +33,7 @@ const CopyAdsPage = () => {
         <p className="text-sm pt-4 text-gray-500">
           Copy ads are short, impactful advertisements that utilize the power of
           language to convince consumers to take a particular
-          action. Whether it's buying a product or signing up for a service, the
+          action. Whether it&apos;s buying a product or signing up for a service, the
           objective of copy ads is to drive the consumer towards a desired
           outcome.
         </p>
