@@ -27,10 +27,10 @@ const CopyAdsPage = () => {
   return (
     <Sidebar title="Copy Ads">
       <section className="mx-4">
-        <h2 className="text-gray-100 text-center sm:text-left">
+        <h2 className="text-gray-100 flex justify-center md:text-3xl">
           Copywritting for Ads
         </h2>
-        <p className="text-sm pt-4 text-gray-500">
+        <p className="text-sm md:text-base  pt-4 text-gray-500 max-w-xl mx-auto text-center">
           Copy ads are short, impactful advertisements that utilize the power of
           language to convince consumers to take a particular
           action. Whether it&apos;s buying a product or signing up for a service, the
@@ -68,7 +68,7 @@ const CopyAdsPage = () => {
               onChange={(e) => setAdsMessage(e.target.value)}
               id="message"
               rows={4}
-              className="block p-2.5 w-full text-sm  rounded-lg border  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+              className="block p-2.5 w-full text-sm rounded-lg border  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
               placeholder="Write the sector you focus on or give it a short description about the goal you want to achieve! (Example 01: Digital Marketing and SEO)  (Example 02: Selling clothes for a summer season)"
             />
             {isLoading ? (

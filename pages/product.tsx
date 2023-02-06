@@ -24,23 +24,23 @@ const ProductPage = () => {
   return (
     <Sidebar title="Product Description">
       <section className="mx-4">
-        <h2 className="text-gray-100 text-center sm:text-left">
+        <h2 className={`text-gray-100 flex justify-center md:text-3xl ${predictionOutput && "mb-8 md:mb-20"}`}>
           Product Description
         </h2>
         {!predictionOutput && (
-          <div>
-            <p className="text-sm pt-4 text-left text-gray-500">
+          <div className="flex flex-col content-center">
+            <p className="text-sm md:text-base  pt-4 text-gray-500 max-w-xl mx-auto text-center">
               AI can be useful in product descriptions by automating the process
               of generating product descriptions. This can lead to several
               benefits such as:
             </p>
-            <ul className="text-sm py-4 text-gray-500">
+            <ul className="text-sm  md:text-base py-4 text-center text-gray-500">
               <li>
-                1- Time-saving:quickly and efficiently, saving time for
-                businesses.
+                1- Consistency: professional and cohesive product catalog.
               </li>
               <li>
-                2- Consistency: professional and cohesive product catalog.
+                2- Time-saving:quickly and efficiently, saving time for
+                businesses.
               </li>
               <li>
                 3- Personalization: more relevant and appealing to individual
