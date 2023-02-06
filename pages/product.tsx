@@ -29,12 +29,12 @@ const ProductPage = () => {
         </h2>
         {!predictionOutput && (
           <div>
-            <p className="text-sm pt-4 text-left">
+            <p className="text-sm pt-4 text-left text-gray-500">
               AI can be useful in product descriptions by automating the process
               of generating product descriptions. This can lead to several
               benefits such as:
             </p>
-            <ul className="text-sm py-4">
+            <ul className="text-sm py-4 text-gray-500">
               <li>
                 1- Time-saving:quickly and efficiently, saving time for
                 businesses.
