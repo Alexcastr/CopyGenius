@@ -1,9 +1,8 @@
 import { FC, useContext } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import { Footer, ToggleMenu } from "./";
 import { UIContext } from '../context';
+import { ActiveLink, Footer, ToggleMenu } from "./";
 import copygenius from "../public/copygenius.png";
 
 
@@ -15,6 +14,7 @@ interface Props {
   children: React.ReactNode;
 }
 
+
 export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
   const {sideMenuOpen} = useContext(UIContext)
   
@@ -24,8 +24,11 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
         <title>{title}</title>
         <meta name="author" content="Alex Castro" />
         <meta name="description" content="Generate copy for advertisement" />
-        <meta name="keywords" content="Ads, Copywriting, Products, AI, artificial intelligence" />
-        <link rel="icon" href="/copygenius.png" /> 
+        <meta
+          name="keywords"
+          content="Ads, Copywriting, Products, AI, artificial intelligence"
+        />
+        <link rel="icon" href="/copygenius.png" />
       </Head>
       <div className="relative h-full md:flex">
         <ToggleMenu />
@@ -45,36 +48,30 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
               height={80}
             />
             <nav className="pl-4 pt-4">
-              <Link href="/" legacyBehavior>
-                <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
-                  <div className="flex gap-4 items-center">
-                    <span>
-                      <AiFillHome />
-                    </span>{" "}
-                    Home
-                  </div>
-                </a>
-              </Link>
-              <Link href="/copyads" legacyBehavior>
-                <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
-                  <div className="flex gap-4 items-center">
-                    <span>
-                      <AiTwotoneCopy />
-                    </span>{" "}
-                    Copy ads
-                  </div>
-                </a>
-              </Link>
-              <Link href="/product" legacyBehavior>
-                <a className="block py-2.5 px-4 hover:bg-[#B6EADA] hover:text-gray-800 rounded transition duration-200">
-                  <div className="flex gap-4 items-center">
-                    <span>
-                      <AiTwotoneShopping />
-                    </span>{" "}
-                    Product Description
-                  </div>
-                </a>
-              </Link>
+              <ActiveLink href="/">
+                <div className="flex gap-4 items-center">
+                  <span>
+                    <AiFillHome />
+                  </span>{" "}
+                  Home
+                </div>
+              </ActiveLink>
+              <ActiveLink href="/copyads">
+                <div className="flex gap-4 items-center">
+                  <span>
+                    <AiTwotoneCopy />
+                  </span>{" "}
+                  Copy Ads
+                </div>
+              </ActiveLink>
+              <ActiveLink href="/product">
+                <div className="flex gap-4 items-center">
+                  <span>
+                    <AiTwotoneShopping />
+                  </span>{" "}
+                  Product Description
+                </div>
+              </ActiveLink>
             </nav>
             <Footer />
           </div>
