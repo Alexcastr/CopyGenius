@@ -44,8 +44,8 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
               className="mx-auto"
               src={copygenius}
               alt="copygenius logo"
-              width={80}
-              height={80}
+              width={133}
+              height={133}
             />
             <nav className="pl-4 pt-4">
               <ActiveLink href="/">
