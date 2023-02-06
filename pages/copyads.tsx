@@ -25,15 +25,17 @@ const CopyAdsPage = () => {
   }
 
   return (
-    <Sidebar title='Copy Ads'>
+    <Sidebar title="Copy Ads">
       <section className="mx-4">
         <h2 className="text-gray-100 text-center sm:text-left">
           Copywritting for Ads
         </h2>
-        <p className='text-sm pt-4'>
-          Copy ads are short advertisements that use persuasive language and
-          visuals to encourage consumers to take a specific action, such as
-          making a purchase or signing up for a service.
+        <p className="text-sm pt-4 text-gray-500">
+          Copy ads are short, impactful advertisements that utilize the power of
+          language to convince consumers to take a particular
+          action. Whether it's buying a product or signing up for a service, the
+          objective of copy ads is to drive the consumer towards a desired
+          outcome.
         </p>
         <div className="flex flex-col gap-4 sm:justify-evenly sm:flex-row pb-20">
           <form className="mt-10" onSubmit={handleMessage}>
