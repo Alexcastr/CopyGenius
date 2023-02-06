@@ -37,9 +37,9 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
         <aside
           className={`${
             sideMenuOpen ? "-translate-x-full " : ""
-          }  bg-slate-900 text-blue-100 w-64 h-[102vh] space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+          }  bg-slate-900 text-blue-100 w-64 min-h-screen space-y-6 py-7 px-2 absolute z-20 inset-y-0 left-0 transform  md:relative md:translate-x-0 transition duration-200 ease-in-out`}
         >
-          <div className="sticky left-0 top-7 flex flex-col gap-24">
+          <div className="sticky left-0 top-7 flex flex-col gap-28">
             <Image
               className="mx-auto"
               src={copygenius}
@@ -77,7 +77,7 @@ export const Sidebar: FC<Props> = ({ children, title = "CopyGenius" }) => {
           </div>
         </aside>
 
-        <main className=" bg-[#03001C] flex-1 text-2xl font-bold text-gray-700 pt-5 md:pt-16 h-[102vh] ">
+        <main className=" bg-[#03001C] flex-1 text-2xl font-bold text-gray-700 pt-5 md:pt-16 min-h-screen ">
           {children}
         </main>
       </div>
